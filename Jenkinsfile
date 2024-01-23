@@ -1,20 +1,13 @@
 pipeline {
     agent any
-
+    
     stages {
-        stage('Build') {
+        stage('Checkout Repository') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                script {
+                    git branch: 'master',
+                    url: 'https://github.com/Michal-Wojtowicz/salesforce-jenkins-vlocity.git'
+                }
             }
         }
     }
