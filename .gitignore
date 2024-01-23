@@ -1,0 +1,5 @@
+.forceignore
+.lh/
+.sf/
+.sfdx/
+.vscode/settings.json
